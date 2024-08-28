@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class professionallab1 {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+         
+            System.out.println("Hello!");
+
+          
+            System.out.print("Please write a sentence: ");
+            String sentence = scanner.nextLine().trim(); 
+
+           
+            if (sentence.isEmpty()) {
+                System.out.println("You didn't write a sentence.");
+            } else {
+              
+                String[] words = sentence.split("\\s+");
+
+               
+                System.out.println("The number of words in your sentence is: " + words.length);
+            }
+
+            scanner.close();
+        }
+    }
+}
